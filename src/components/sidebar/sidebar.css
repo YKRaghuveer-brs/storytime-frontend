@@ -1,0 +1,270 @@
+#marquee {
+    white-space: nowrap;
+    overflow: hidden;
+    position: relative;
+    
+    /* background: #080202c2; */
+    color: #ffffff;
+    font-size: 18px;
+    /* padding:0px 20px; */
+    padding-bottom: 20px;
+    height:32px;
+    
+  }
+
+  #marquee-content {
+    display: inline-block;
+    position: absolute;
+    animation: scroll 18s linear infinite;
+  }
+
+  @keyframes scroll {
+    0% {
+      transform: translateX(100%);
+    }
+    30% {
+      transform: translateX(0%);
+    }
+    32% {
+      transform: translateX(4%);
+    }
+    34% {
+      transform: translateX(0%);
+    }
+    35% {
+      transform: translateX(1%);
+    }
+    36% {
+      transform: translateX(0%);
+    }
+    58% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+
+
+  * {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: Arial, Helvetica, sans-serif;
+  transition: background 0.4s ease;
+}
+
+.selectedEpisodeBg {
+  background: #7260ab;
+}
+
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+input[type="range"] {
+  height: 5px;
+  -webkit-appearance: none;
+  width: 100%;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  background: #3b7677;
+  transition: background 0.2s ease;
+  cursor: pointer;
+}
+
+.audio-player1 {
+  max-width: 350px;
+  padding: 24px;
+  border-radius: 20px;
+  box-shadow: 0 28px 28px rgba(0, 0, 0, 0.2);
+  margin: auto;
+}
+
+.audio-player2 {
+  padding: 24px;
+  border-radius: 20px;
+  box-shadow: 0 28px 28px rgba(0, 0, 0, 0.2);
+  margin: auto;
+  color: var(--white);
+}
+
+.artwork1 {
+  display: block;
+  margin: auto;
+  height: 200px;
+  width: 200px;
+}
+
+.artwork2 {
+  display: block;
+  height: 300px;
+  width: 300px;
+}
+
+.track-info1 {
+  text-align: center;
+  z-index: 1;
+  position: relative;
+}
+
+.track-info2 {
+  z-index: 1;
+  position: relative;
+}
+
+.title {
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.artist {
+  font-weight: 300;
+  margin-top: 0;
+}
+
+.audio-controls {
+  display: flex;
+  justify-content: space-between;
+  width: 75%;
+  margin: 0 auto 15px;
+  --white: #fff;
+  --active-color: #00aeb0;
+}
+
+.audio-controls .prev svg,
+.audio-controls .next svg {
+  width: 16px;
+  height: 26px;
+}
+
+.audio-controls .play,
+.audio-controls .pause {
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 20px;
+  border-radius: 50%;
+}
+
+.audio-controls .play svg,
+.audio-controls .pause svg {
+  height: 30px;
+  width: 30px;
+}
+
+.audio-controls path {
+  fill: var(--white);
+}
+
+.audio-controls2 {
+  display: flex;
+  justify-content: space-between;
+  width: 25%;
+  margin: 0 auto 15px;
+  --white: #fff;
+  --active-color: #00aeb0;
+}
+
+.audio-controls2 .prev svg,
+.audio-controls2 .next svg {
+  width: 35px;
+  height: 35px;
+}
+
+.audio-controls2 .play svg,
+.audio-controls2 .pause svg {
+  height: 40px;
+  width: 40px;
+}
+
+.audio-controls2 path {
+  fill: var(--white);
+}
+
+.color-backdrop {
+  background: linear-gradient(45deg, var(--active-color) 20%, transparent 100%)
+    no-repeat;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+}
+
+.color-backdrop.playing {
+  animation: colorChange 20s alternate infinite;
+}
+
+.audioTrack {
+  background: #ffffff;
+  color: #00a651;
+  margin-bottom: 4px;
+}
+.audioTrack:hover {
+  background: #00a651;
+  color: #ffffff;
+}
+
+.ScrollStyle {
+  max-height: 450px;
+  overflow-y: scroll;
+}
+
+@keyframes colorChange {
+  from {
+    filter: hue-rotate(0deg);
+  }
+  to {
+    filter: hue-rotate(360deg);
+  }
+}
+
+
+
+@keyframes drop {
+  0% {
+    transform: translateY(-680px);
+    opacity: 0;
+  }
+  /* 30% {
+    transform: translateY(-570px);
+    opacity: 1;
+  }
+  50% {
+    transform: translateY(380px);
+    opacity: 1;
+  } */
+  90% {
+    transform: translateY(-10px);
+    opacity: 1;
+  }
+  94% {
+    transform: translateY(10px);
+    opacity: 1;
+  }
+  97% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+  98% {
+    transform: translateY(20px);
+    opacity: 1;
+  }
+  99% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-20px);
+    opacity: 1;
+  }
+}
+
+/* @layer utilities { */
+  .drop-in {
+    animation: drop 0.6s ease-out forwards;
+  }
+/* } */
