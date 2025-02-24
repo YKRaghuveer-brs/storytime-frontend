@@ -125,7 +125,7 @@ const NavigationBar = () => {
                   ? "relative px-3 py-2 after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-full after:h-0.5 after:bg-yellow-300 after:origin-left after:transition-transform after:duration-300 after:scale-x-100 after:animate-slide"
                   : "relative px-3 py-2 after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-full after:h-0.5 after:bg-gray-400 after:origin-left after:transition-transform after:duration-200 after:scale-x-0 hover:after:scale-x-100"
                   )}>Library</NavLink>
-                  <NavLink to="/users" className={isAdmin ? "text-green-500 relative px-3 py-2 after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-full after:h-0.5 after:bg-gray-400 after:origin-left after:transition-transform after:duration-200 after:scale-x-0 hover:after:scale-x-100" : "hidden"} >Admin Dashboard</NavLink>
+                  {/* <NavLink to="/users" className={isAdmin ? "text-green-500 relative px-3 py-2 after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-full after:h-0.5 after:bg-gray-400 after:origin-left after:transition-transform after:duration-200 after:scale-x-0 hover:after:scale-x-100" : "hidden"} >Admin Dashboard</NavLink> */}
               </div>
             </div>
             

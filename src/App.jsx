@@ -24,11 +24,11 @@ import { useGetRefreshTokenAPIQuery } from "./store/user/userApiSlice";
 import CatchyMusicButton from "./components/sidebar/CatchyMusicButton";
 
 
-import AdminRoutes from "./components/AdminRoutes";
-import UsersTable from "./components/admin/UsersTable";
-import AdminsTable from "./components/admin/AdminsTable";
-import AdminCategories from "./components/admin/AdminCategories";
-import AdminLanguages from "./components/admin/AdminLanguages";
+// import AdminRoutes from "./components/AdminRoutes";
+// import UsersTable from "./components/admin/UsersTable";
+// import AdminsTable from "./components/admin/AdminsTable";
+// import AdminCategories from "./components/admin/AdminCategories";
+// import AdminLanguages from "./components/admin/AdminLanguages";
 
 
 
@@ -65,12 +65,12 @@ const router = createBrowserRouter([
 
   ]},
 
-  {element: <AdminRoutes />, children: [
-    { path: "/users", element: <UsersTable /> },
-    { path: "/admins", element: <AdminsTable /> },
-    { path: "/admincategories", element: <AdminCategories /> },
-    { path: "/adminlanguages", element: <AdminLanguages /> },
-  ]},
+  // {element: <AdminRoutes />, children: [
+  //   { path: "/users", element: <UsersTable /> },
+  //   { path: "/admins", element: <AdminsTable /> },
+  //   { path: "/admincategories", element: <AdminCategories /> },
+  //   { path: "/adminlanguages", element: <AdminLanguages /> },
+  // ]},
 ])
 
 export default function App() {
