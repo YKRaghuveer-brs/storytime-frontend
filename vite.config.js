@@ -8,4 +8,7 @@ export default defineConfig({
     port:  process.env.PORT || 3000, // Use process.env.PORT if it's available
     host: true, // Ensure Vite binds to all network interfaces
   },
+  preview: {
+    allowedHosts: ['storytime-frontend-iypj.onrender.com']
+  }
 })
